@@ -9,7 +9,7 @@ import './App.css';
 export default function App() {
   const [feedbacks, setFeedbacks] = useState({ good: 0, neutral: 0, bad: 0 });
 
-  const onLeaveFeedback = option => {
+  const onFeedbackBtn = option => {
     setFeedbacks(prevState => ({
       ...prevState,
       [option]: prevState[option] + 1,
@@ -36,7 +36,7 @@ export default function App() {
       <SectionTitle title="Please leave feedback">
         <FeedbackBtn
           options={['good', 'neutral', 'bad']}
-          onLeaveFeedback={onLeaveFeedback}
+          onFeedbackBtn={onFeedbackBtn}
         />
       </SectionTitle>
       <SectionTitle title="Statistics">
